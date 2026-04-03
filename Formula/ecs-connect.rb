@@ -5,20 +5,20 @@
 class EcsConnect < Formula
   desc "Interactive CLI for exec-ing into running AWS ECS tasks"
   homepage "https://github.com/vipinvkartha/ecs-connect"
-  version "0.1.1"
+  version "0.1.2"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/vipinvkartha/ecs-connect/releases/download/v0.1.1/ecs-connect_darwin_amd64.tar.gz"
-      sha256 "2796acfa17248ee3f02e898e610d1f8c259190148e08f1d146440c10154a6951"
+      url "https://github.com/vipinvkartha/ecs-connect/releases/download/v0.1.2/ecs-connect_darwin_amd64.tar.gz"
+      sha256 "954781519f0b0a60ee0357da72213a8900ecee54dfc63765ab49e1446e29d48b"
 
       define_method(:install) do
         bin.install "ecs-connect"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/vipinvkartha/ecs-connect/releases/download/v0.1.1/ecs-connect_darwin_arm64.tar.gz"
-      sha256 "84852a6a18fb1564a7c9d57f06db231cf18ba49bb8a6f8827d6e8161b99e2bce"
+      url "https://github.com/vipinvkartha/ecs-connect/releases/download/v0.1.2/ecs-connect_darwin_arm64.tar.gz"
+      sha256 "362888c9b5519e926501ac9de4b883c9691e37795414ad3731440f62b3999ed4"
 
       define_method(:install) do
         bin.install "ecs-connect"
@@ -28,15 +28,15 @@ class EcsConnect < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/vipinvkartha/ecs-connect/releases/download/v0.1.1/ecs-connect_linux_amd64.tar.gz"
-      sha256 "54c0dab49f1253552d3e0a8cf1143784d72935ddb39e1259cc77dfda63b2ff4e"
+      url "https://github.com/vipinvkartha/ecs-connect/releases/download/v0.1.2/ecs-connect_linux_amd64.tar.gz"
+      sha256 "ba54a31933310d2c5770c4028006a3a598c8d594334475a253dfedc93247b517"
       define_method(:install) do
         bin.install "ecs-connect"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/vipinvkartha/ecs-connect/releases/download/v0.1.1/ecs-connect_linux_arm64.tar.gz"
-      sha256 "888bda340f25913090529b53c68c1538df708a3247bc62948a071fa7c4aadb44"
+      url "https://github.com/vipinvkartha/ecs-connect/releases/download/v0.1.2/ecs-connect_linux_arm64.tar.gz"
+      sha256 "49e05d68345807cea4dac585c3346164a22a86a04d5933e8a24b60d60c8c5e54"
       define_method(:install) do
         bin.install "ecs-connect"
       end
